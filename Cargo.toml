@@ -1,0 +1,12 @@
+[package]
+name = "htop"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tui = "0.19"
+crossterm = "0.27"
+sysinfo = "0.29"
+toml = "0.8"
+serde = { version = "1.0", features = ["derive"] }
+
