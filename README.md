@@ -24,6 +24,7 @@ Configurable refresh rate and default sort field via config.toml
 Prerequisites
 Rust (install via rustup)
 
+
 # Build and Run
 git clone https://github.com/yourname/tui-process-monitor
 
@@ -33,15 +34,43 @@ cargo build --release
 
 cargo run --release
 
+
+# 🛠️ Dependencies
+crossterm
+
+tui
+
+sysinfo
+
+serde
+
+toml
+
+
 # ⚙️ Configuration
 Create a config.toml in the same directory (optional):
 
-# toml
+# config.toml
 refresh_rate = 1000      # Refresh interval in milliseconds
 
 default_sort = "cpu"     # Options: "cpu", "mem", "name"
 
 If no config.toml is found, defaults will be used.
+
+
+# cargo.toml
+ 
+[dependencies]
+
+crossterm = "0.27"
+
+tui = "0.19"
+
+sysinfo = "0.30"
+
+serde = { version = "1.0", features = ["derive"] }
+
+toml = "0.8"
 
 
 # 🕹️ Key Bindings
@@ -63,30 +92,3 @@ r  	Toggle sort order (asc/desc)
 ↑ / ↓	  Navigate the process list
 
 Backspace	  Delete character in search
-
-
-# 🛠️ Dependencies
-crossterm
-
-tui
-
-sysinfo
-
-serde
-
-toml
-
-
-# toml
- 
-[dependencies]
-
-crossterm = "0.27"
-
-tui = "0.19"
-
-sysinfo = "0.30"
-
-serde = { version = "1.0", features = ["derive"] }
-
-toml = "0.8"
