@@ -76,7 +76,6 @@ serde
 
 toml
 
-Add these in Cargo.toml if not already:
 
 # toml
  
