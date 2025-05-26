@@ -26,7 +26,7 @@ Rust (install via rustup)
 
 
 # Build and Run
-git clone https://github.com/yourname/tui-process-monitor
+git clone https://github.com/anonamosadmn/rust-htop
 
 cd tui-process-monitor
 
